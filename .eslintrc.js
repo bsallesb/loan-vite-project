@@ -69,6 +69,7 @@ module.exports = {
           '/^react$/',
           'module',
           '/^assets/',
+          '/^Config/',
           '/^context/',
           '/^components/',
           '/^helpers/',

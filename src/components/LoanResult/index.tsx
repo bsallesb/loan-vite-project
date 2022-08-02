@@ -7,7 +7,12 @@ import LogoT from 'assets/tudo-logo-1.png';
 
 import { useLoan } from 'context/Loan';
 
-import { formatCurrency, percentage } from 'helpers';
+import {
+  brazilianDateToJS,
+  formatCurrency,
+  formatDate,
+  rateToPercentage,
+} from 'helpers';
 
 import { ImgCard, ResultCard } from './styles';
 
@@ -36,14 +41,15 @@ const LoanResult: React.FC = () => {
             <div className="d-flex flex-column border-start border-1 px-2 px-sm-5 py-4">
               <span className="fs-5">com taxa de</span>
               <strong className="fs-5">
-                {percentage(simulation.rate)}% a.m.
+                {rateToPercentage(simulation.rate)}% a.m.
               </strong>
             </div>
           </div>
           <div className="border-top border-1 pt-4 pb-3">
             <span className="fs-5">Previsão de pagamento</span>
             <h2 className="fs-5">
-              {simulation.nearEstimatedDate} a {simulation.fatEstimatedDate}
+              {formatDate(brazilianDateToJS(simulation.nearEstimatedDate))} a{' '}
+              {formatDate(brazilianDateToJS(simulation.fatEstimatedDate))}
             </h2>
           </div>
           <div className="text-end">

@@ -15,7 +15,9 @@ import Pill from 'components/Pills/Pill';
 import Section from 'components/Section';
 import Wrapper from 'components/Wrapper';
 
-import { formatCurrency } from 'helpers';
+import { currencyToFloat, formatCurrency } from 'helpers';
+
+import useTitle from 'hooks/useTitle';
 
 import { Input } from './styles';
 
@@ -31,10 +33,16 @@ const Value: React.FC = () => {
   } = useLoan();
 
   const navigate = useNavigate();
+  const setTitle = useTitle();
 
   useEffect(() => {
     getValues();
   }, [getValues]);
+
+  useEffect(() => {
+    setTitle('Valores');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleUserClickButton = useCallback(() => {
     setError(null);
@@ -77,14 +85,17 @@ const Value: React.FC = () => {
                     <div className="d-flex justify-content-center">
                       <h3 className="me-3 fs-3">Outro valor</h3>
                       <Input
-                        placeholder="R$ 00,00"
+                        placeholder="R$ 0,00"
                         allowNegativeValue={false}
                         decimalsLimit={2}
                         className="text-center"
                         decimalSeparator=","
                         groupSeparator="."
+                        prefix="R$ "
                         value={chosenValue}
-                        onChange={(e) => setChosenValue(Number(e.target.value))}
+                        onChange={(e) =>
+                          setChosenValue(currencyToFloat(e.target.value))
+                        }
                       />
                     </div>
                   </div>

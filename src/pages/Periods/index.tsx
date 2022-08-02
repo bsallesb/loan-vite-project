@@ -15,6 +15,8 @@ import Pill from 'components/Pills/Pill';
 import Section from 'components/Section';
 import Wrapper from 'components/Wrapper';
 
+import useTitle from 'hooks/useTitle';
+
 import { Input } from './styles';
 
 const Periods: React.FC = () => {
@@ -29,10 +31,16 @@ const Periods: React.FC = () => {
   } = useLoan();
 
   const navigate = useNavigate();
+  const setTitle = useTitle();
 
   useEffect(() => {
     getInstallments();
   }, [getInstallments]);
+
+  useEffect(() => {
+    setTitle('Períodos');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleUserClickButton = useCallback(() => {
     setError(null);
@@ -48,7 +56,7 @@ const Periods: React.FC = () => {
 
   return (
     <Wrapper>
-      <Header title="Periodos" url="/valores" />
+      <Header title="Períodos" url="/valores" />
       <Container>
         <LoadingGate
           waitFor={isLoading === false}

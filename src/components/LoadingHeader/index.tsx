@@ -5,11 +5,11 @@ const LoadingHeader: React.FC = () => (
     <ContentLoader
       speed={2}
       width="100%"
-      height={65}
-      backgroundColor="#d4d3db"
-      foregroundColor="#ece4e4"
+      height={66}
+      backgroundColor="#000"
+      foregroundColor="#000"
     >
-      <rect x="0" y="0" rx="10" ry="10" width="100%" height="65" />
+      <rect x="0" y="0" rx="0" ry="0" width="100%" height="66" />
     </ContentLoader>
   </div>
 );

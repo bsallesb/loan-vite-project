@@ -12,12 +12,21 @@ import LoanResult from 'components/LoanResult';
 import Section from 'components/Section';
 import Wrapper from 'components/Wrapper';
 
+import useTitle from 'hooks/useTitle';
+
 const Periods: React.FC = () => {
   const { getSimulation, isLoading } = useLoan();
+
+  const setTitle = useTitle();
 
   useEffect(() => {
     getSimulation();
   }, [getSimulation]);
+
+  useEffect(() => {
+    setTitle('Resultados');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Wrapper>

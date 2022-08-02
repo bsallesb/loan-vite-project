@@ -1,3 +1,9 @@
+export const brazilianDateToJS = (date: string): string => {
+  const dateParts = date.split('/');
+
+  return `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
+};
+
 export const formatDate = (value: string, locale = 'pt-BR'): string =>
   new Date(value).toLocaleString(locale, {
     year: 'numeric',
@@ -5,15 +11,14 @@ export const formatDate = (value: string, locale = 'pt-BR'): string =>
     day: 'numeric',
   });
 
-export const percentage = (value: number): number => value * 100;
+export const rateToPercentage = (value: number): number => value * 100;
 
 export const formatCurrency = (value: number): string =>
   new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(
     value,
   );
 
-export const date = (value: string): string => {
-  const splitedDate = value.split('/');
-
-  return splitedDate[0];
-};
+export const currencyToFloat = (value: string): number =>
+  parseFloat(
+    value.replaceAll('R$ ', '').replaceAll('.', '').replaceAll(',', '.'),
+  );

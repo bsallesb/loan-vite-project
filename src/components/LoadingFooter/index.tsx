@@ -6,8 +6,8 @@ const LoadingFooter: React.FC = () => (
       speed={2}
       width="100%"
       height={65}
-      backgroundColor="#d4d3db"
-      foregroundColor="#ece4e4"
+      backgroundColor="#fff"
+      foregroundColor="#fff"
     >
       <rect x="0" y="0" rx="0" ry="0" width="100%" height="65" />
     </ContentLoader>
