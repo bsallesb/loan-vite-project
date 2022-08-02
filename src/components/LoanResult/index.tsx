@@ -22,7 +22,7 @@ const LoanResult: React.FC = () => {
             <ImgCard className="border border-1">
               <img src={LogoT} alt="Logo" className="img-fluid" />
             </ImgCard>
-            <div className="d-flex flex-column text-start">
+            <div className="d-flex flex-column text-center text-sm-start">
               <h2 className="fs-5">
                 {simulation.numberOfInstallments} parcelas de
               </h2>
@@ -33,7 +33,7 @@ const LoanResult: React.FC = () => {
                 Total de {formatCurrency(simulation.contractValue)}
               </span>
             </div>
-            <div className="d-flex flex-column border-start border-1 px-5 py-4">
+            <div className="d-flex flex-column border-start border-1 px-2 px-sm-5 py-4">
               <span className="fs-5">com taxa de</span>
               <strong className="fs-5">
                 {percentage(simulation.rate)}% a.m.

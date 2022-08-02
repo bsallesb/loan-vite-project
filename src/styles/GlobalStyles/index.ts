@@ -61,27 +61,35 @@ export default createGlobalStyle`
     }
 
     .fs-1 {
-        font-size: 1.8 rem !important;
+        font-size: 3 rem !important;
     }
 
     .fs-2 {
-        font-size: 1.8 rem !important;
-    }
-
-    .fs-3 {
-        font-size: 1.6 rem !important;
-    }
-
-    .fs-4 {
         font-size: 1.9 rem !important;
     }
 
+    .fs-3 {
+        font-size: 1.8 rem !important;
+    }
+
+    .fs-4 {
+        font-size: 1.7 rem !important;
+    }
+
     .fs-5 {
-        font-size: 1.3 rem !important;
+        font-size: 1.6 rem !important;
     }
 
     .fs-6 {
+        font-size: 1.4 rem !important;
+    }
+
+    .fs-7 {
         font-size: 1.2 rem !important;
+    }
+
+    .fs-8 {
+        font-size: 1 rem !important;
     }
 
     .fs-700 {

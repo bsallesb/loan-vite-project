@@ -2,6 +2,8 @@ import React, { lazy, memo, Suspense } from 'react';
 
 import { BrowserRouter, Routes as Switch, Route } from 'react-router-dom';
 
+import LoadingPage from 'components/LoadingPage';
+
 import Home from 'pages/Home';
 
 const Periods = lazy(() => import('pages/Periods'));
@@ -10,7 +12,7 @@ const Values = lazy(() => import('pages/Values'));
 
 const Routes: React.FC = () => {
   return (
-    <Suspense fallback="loading...">
+    <Suspense fallback={<LoadingPage />}>
       <BrowserRouter>
         <Switch>
           <Route path="/" element={<Home />} />

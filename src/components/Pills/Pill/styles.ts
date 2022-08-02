@@ -5,7 +5,3 @@ export const PillWrapper = styled.button`
   border-radius: 10px;
   padding: 20px;
 `;
-
-export const Title = styled.span`
-  font-size: 16px;
-`;

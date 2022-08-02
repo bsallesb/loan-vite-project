@@ -12,10 +12,6 @@ import {
   ArrowDown,
   BackgroundHeader,
   LogoWrapper,
-  Paragraph,
-  Strong,
-  Title,
-  UserName,
   UserWrapper,
 } from './styles';
 
@@ -47,12 +43,10 @@ const Header: React.FC<IHeaderProps> = ({
                 <FiBell color="white" size={20} />
               </div>
             </div>
-            <UserWrapper className="text-center">
-              <UserName className="text-white mb-3">Olá, {clientName}</UserName>
-              <Paragraph className="text-white m-0">
-                Seu crédito disponível é de
-              </Paragraph>
-              <Strong className="text-pink">{clientCredit}</Strong>
+            <UserWrapper className="text-center mt-3 mt-sm-0">
+              <h2 className="text-white mb-3 fs-2">Olá, {clientName}</h2>
+              <p className="text-white m-0 fs-5">Seu crédito disponível é de</p>
+              <strong className="text-pink fs-1">{clientCredit}</strong>
             </UserWrapper>
             <ArrowDown className="text-center text-pink">
               <IoIosArrowDropdownCircle size={45} />
@@ -66,7 +60,7 @@ const Header: React.FC<IHeaderProps> = ({
               </Link>
             </Col>
             <Col className="col-4 text-center">
-              <Title className="text-white">{title}</Title>
+              <span className="text-white fs-3">{title}</span>
             </Col>
           </Row>
         )}

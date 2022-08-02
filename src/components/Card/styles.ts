@@ -14,9 +14,21 @@ export const CardImg = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 14px;
+  @media (max-width: 400px) {
+    font-size: 1rem !important;
+  }
+
+  @media (min-width: 400px) {
+    font-size: 1.6rem !important;
+  }
 `;
 
 export const Paragraph = styled.p`
-  font-size: 12px;
+  @media (max-width: 400px) {
+    font-size: 1rem !important;
+  }
+
+  @media (min-width: 400px) {
+    font-size: 1.2rem !important;
+  }
 `;

@@ -75,7 +75,7 @@ const Value: React.FC = () => {
                   </Pills>
                   <div className="mb-5">
                     <div className="d-flex justify-content-center">
-                      <h3 className="me-3 fs-2">Outro valor</h3>
+                      <h3 className="me-3 fs-3">Outro valor</h3>
                       <Input
                         placeholder="R$ 00,00"
                         allowNegativeValue={false}
@@ -91,8 +91,8 @@ const Value: React.FC = () => {
                   <Button onClick={handleUserClickButton} />
                   {error && (
                     <Row className="justify-content-center">
-                      <Col className="col-6">
-                        <Alert variant="danger" className="text-center">
+                      <Col className="col-8">
+                        <Alert variant="danger" className="text-center fs-5">
                           {error}
                         </Alert>
                       </Col>

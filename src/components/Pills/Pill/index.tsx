@@ -2,7 +2,7 @@ import { memo, MouseEventHandler } from 'react';
 
 import { Col } from 'react-bootstrap';
 
-import { PillWrapper, Title } from './styles';
+import { PillWrapper } from './styles';
 
 interface IPillProps {
   value?: string;
@@ -18,9 +18,9 @@ const Pill: React.FC<IPillProps> = ({ value, months, className, onClick }) => {
         className={`shadow w-100 border-0 ${className}`}
         onClick={onClick}
       >
-        {value && <Title className="mt-auto mb-1 text-black">{value}</Title>}
+        {value && <span className="mt-auto mb-1 text-black fs-4">{value}</span>}
         {months && (
-          <Title className="mt-auto mb-1 text-black">{months} meses</Title>
+          <span className="mt-auto mb-1 text-black fs-4">{months} meses</span>
         )}
       </PillWrapper>
     </Col>

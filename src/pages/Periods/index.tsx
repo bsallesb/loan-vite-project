@@ -80,14 +80,14 @@ const Periods: React.FC = () => {
                         value={months}
                         onChange={(e) => setMonths(Number(e.target.value))}
                       />
-                      <h3 className="fs-2">meses</h3>
+                      <h3 className="fs-3">meses</h3>
                     </div>
                   </div>
                   <Button onClick={handleUserClickButton} />
                   {error && (
                     <Row className="justify-content-center">
-                      <Col className="col-6">
-                        <Alert variant="danger" className="text-center">
+                      <Col className="col-8">
+                        <Alert variant="danger" className="text-center fs-5">
                           {error}
                         </Alert>
                       </Col>
